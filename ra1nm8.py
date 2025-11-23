@@ -5,7 +5,7 @@ import os
 def __modStart():
     print("Note: This is software to help you get a package manager and libraries.\nThis IS NOT for normal use.\n(H4yPkg is good btw)")
     while True:
-        wowsh = input("Ra1nm8 ⟫ ")
+        wowsh = input("Ra1nSH ⟫ ")
         if wowsh[:5] == "init ":
             exec(f"from mods.ha1l import {wowsh[5:].translate(str.maketrans("", "", "\""))}\n{wowsh[5:].translate(str.maketrans("", "", "\""))}.__onHa1lResponse()")
         elif wowsh == "get":
@@ -16,6 +16,7 @@ def __modStart():
         else:
 
             print("Use 'init' or 'get' to do stuff and 'exit' to well, exit.")
+
 
 
 
