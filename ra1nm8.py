@@ -7,8 +7,10 @@ def __modStart():
         if wowsh[:5] == "init ":
             exec(f"from mods.ha1l import {wowsh[5:].translate(str.maketrans("", "", "\""))}\n{wowsh[5:].translate(str.maketrans("", "", "\""))}.__onHa1lResponse()")
         elif wowsh[:4] == "get ":
-            print("it no work rn 3:<")
+            wowget = input("Ha1lGet > ")
+            os.system(f"curl -o {os.getcwd()}\\mods\\ha1l\\{wowget}.py https://raw.githubusercontent.com/MooniiCodes/b19eT/refs/heads/main/repo/{wowget}.py")
         elif wowsh == "exit":
             quit()
         else:
+
             print("Use 'init' or 'get' to do stuff and 'exit' to well, exit.")
